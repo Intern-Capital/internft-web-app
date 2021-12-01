@@ -1,0 +1,8 @@
+export const CONTRACT_ADDRESS_FACTORY =
+  'terra1fptgmyds7vyhsxajdcdvsvfn8cddpjzd80exaj';
+export const CONTRACT_ADDRESS_FACTORY_CODE_ID = 16516;
+
+export const CONTRACT_ADDRESS_TOKEN =
+  'terra1haz252nncucs9el5z0sf3jn2cdszpq9tpxylhh';
+
+export const CONTRACT_ADDRESS_TOKEN_CODE_ID = 16520;
