@@ -8,6 +8,7 @@ import { Roadmap } from "./Roadmap"
 import { Team } from "./Team"
 import { Welcome } from "./Welcome"
 import { Newsletter } from "./Newsletter"
+import { Background } from "./Background"
 // import Nav from "./Nav"
 
 export function Home() {

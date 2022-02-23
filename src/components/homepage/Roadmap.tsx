@@ -46,28 +46,28 @@ const communicationFeatures = [
 		icon: MailIcon,
 	},
 	{
-		id: 2,
+		id: 3,
 		name: "Reminder emails",
 		description:
 			"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
 		icon: MailIcon,
 	},
 	{
-		id: 2,
+		id: 4,
 		name: "Reminder emails",
 		description:
 			"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
 		icon: MailIcon,
 	},
 	{
-		id: 2,
+		id: 5,
 		name: "Reminder emails",
 		description:
 			"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
 		icon: MailIcon,
 	},
 	{
-		id: 2,
+		id: 6,
 		name: "Reminder emails",
 		description:
 			"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
