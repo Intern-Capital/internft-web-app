@@ -1,16 +1,19 @@
+// tailwind.config.js
+const defaultTheme = require("tailwindcss/defaultTheme")
+
 module.exports = {
 	content: ["./src/**/*.{js,jsx,ts,tsx}"],
+	plugins: [
+		// ...
+		require("@tailwindcss/aspect-ratio"),
+		require("@tailwindcss/forms"),
+	],
 	theme: {
-		extend: {},
+		extend: {
+			fontFamily: {
+				sans: ["Inter var", ...defaultTheme.fontFamily.sans],
+			},
+		},
 	},
-	plugins: [require("daisyui")],
-	// config (optional)
-	daisyui: {
-		styled: true,
-		base: true,
-		utils: true,
-		logs: true,
-		rtl: false,
-		themes: ["dark", "emerald", "forest", "synthwave"],
-	},
+	// ...
 }
