@@ -1,3 +1,4 @@
+import circle from "../../assets/vector-background-circle.svg"
 import styled from "styled-components"
 
 const GradientBackground = styled.div`
@@ -61,15 +62,22 @@ const GradientBackground = styled.div`
 		animation: flyPlus 8s linear infinite;
 		transform: rotate(0) translate(100px) rotate(0);
 	}
+	.four {
+		width: 2450px;
+		height: 1450px;
+		animation: flyPlus 8s linear infinite;
+		transform: rotate(0) translate(100px) rotate(0);
+	}
 `
 
 export function Background() {
 	return (
 		<GradientBackground>
 			<div className='z-0 wrapper bg-slate-900'>
-				<div className='base one'></div>
+				{/* <div className='base one'></div>
 				<div className='base two'></div>
-				<div className='base three  bg-slate-800'></div>
+				<div className='base three  bg-slate-800'></div> */}
+				<img className='base four blur-3xl' src={circle} alt='circle' />
 			</div>
 		</GradientBackground>
 	)

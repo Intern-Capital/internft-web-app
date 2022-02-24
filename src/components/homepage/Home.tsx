@@ -1,14 +1,15 @@
-import { useNavigate } from "react-router-dom"
 import { About } from "./About"
 import { ArtWall } from "./ArtWall"
+import { Background } from "./Background"
 import { Footer } from "./Footer"
 import { Hero } from "./Hero"
+import { Newsletter } from "./Newsletter"
 import { Partners } from "./Partners"
 import { Roadmap } from "./Roadmap"
 import { Team } from "./Team"
 import { Welcome } from "./Welcome"
-import { Newsletter } from "./Newsletter"
-import { Background } from "./Background"
+import { useNavigate } from "react-router-dom"
+
 // import Nav from "./Nav"
 
 export function Home() {
@@ -20,6 +21,7 @@ export function Home() {
 
 	return (
 		<>
+			<Background />
 			<Hero />
 			<About />
 			<Partners />
