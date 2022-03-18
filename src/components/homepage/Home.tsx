@@ -21,7 +21,7 @@ export function Home() {
 
 	return (
 		<>
-			<Background />
+			{/* <Background /> */}
 			<Hero />
 			<About />
 			<Partners />

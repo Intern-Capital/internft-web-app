@@ -36,6 +36,7 @@
     "@terra-money/terra.js": "^3.0.7",
     "@terra-money/wallet-provider": "^3.8.0",
     "buffer": "^6.0.3",
+    "lottie-react": "^2.2.1",
     "patch-package": "^6.4.7",
     "process": "^0.11.10",
     "react": "^17.0.2",
