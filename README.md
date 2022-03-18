@@ -2,10 +2,6 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Continuous Integration
-
-This project is set up to be deployed to Amazon S3 bucket upon pull request into main branch and will be accessible publically via: https://intern.capital
-
 ## Available Scripts
 
 In the project directory, you can run:
