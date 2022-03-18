@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "cross-env PORT=3002 react-app-rewired start",
-    "build": "react-app-rewired build",
+    "build": "CI=false && react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject",
     "deploy": "npm run build && aws s3 sync build s3://internft-website",
