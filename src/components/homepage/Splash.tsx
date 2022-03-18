@@ -1,7 +1,8 @@
 import { Link, useNavigate } from "react-router-dom"
-
 import deskBackgroundImage from "../../assets/desk-background.jpg"
 import styled from "styled-components"
+import internLogo from "../../assets/intern-capital-logo.svg"
+import videoBackground from "../../assets/space.mp4"
 
 const FlickerEffect = styled.div`
   @keyframes flickerAnimation {
@@ -48,10 +49,10 @@ const FlickerEffect = styled.div`
       opacity: 1;
     }
   }
-  -webkit-animation: flickerAnimation 10s infinite;
-  -moz-animation: flickerAnimation 10s infinite;
-  -o-animation: flickerAnimation 10s infinite;
-  animation: flickerAnimation 10s infinite;
+  // -webkit-animation: flickerAnimation 10s infinite;
+  // -moz-animation: flickerAnimation 10s infinite;
+  // -o-animation: flickerAnimation 10s infinite;
+  // animation: flickerAnimation 10s infinite;
 `
 
 export function Splash() {
@@ -62,37 +63,31 @@ export function Splash() {
   }
 
   return (
-    <div className='bg-black'>
-      <FlickerEffect>
-        <div className='h-screen w-full '></div>
-        <div
-          className='absolute top-0 left-0 w-full h-full bg-cover bg-center'
-          style={{ backgroundImage: `url(${deskBackgroundImage})` }}
-        >
-          <div className='max-w-max mx-auto h-screen flex place-items-center justify-center'>
-            <main className='flex'>
-              <p className='text-4xl font-extrabold text-indigo-600 sm:text-5xl'>Staging</p>
-              <div className='sm:ml-6'>
-                <div className='sm:border-l sm:border-gray-200 sm:pl-6'>
-                  <h1 className='text-4xl font-extrabold text-gray-200 tracking-tight sm:text-5xl'>
-                    Intern Not Found
-                  </h1>
-                  <p className='mt-1 text-base text-gray-100'>Aren't you supposed to be working?</p>
-                </div>
-                <div className='mt-10 flex space-x-3 sm:border-l sm:border-transparent sm:pl-6'>
-                  <Link
-                    to='/home'
-                    type='submit'
-                    className='flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
-                  >
-                    Enter Site
-                  </Link>
-                </div>
-              </div>
-            </main>
+    <>
+      <div className='absolute top-0 left-0 w-full h-full bg-cover bg-center bg-black overflow-hidden'>
+        <div className='max-w-max mx-auto h-screen flex place-items-center justify-center z-1'>
+          <video
+            className='absolute z-0 h-screen w-auto object-cover mx-auto max-w-none left-0 right-0'
+            autoPlay
+            loop
+            muted
+          >
+            <source src={videoBackground} type='video/mp4' />
+          </video>
+          <main className='absolute flex z-1'>
+            <div className='sm:ml-6 pr-12'>
+              <img alt='logo' src={internLogo} className='h-48 w-48' />
+            </div>
+            <div className='text-4xl font-extrabold text-white sm:text-5xl justify-center flex flex-col pl-12 border-l'>
+              <div className='mb-4'>Intern Capital</div>
+              <div className='text-xl font-normal'>Coming Soon...</div>
+            </div>
+          </main>
+          <div className='absolute z-1 w-full bottom-0'>
+            <div className='text-white text-lg p-8'>Powered by Interns</div>
           </div>
         </div>
-      </FlickerEffect>
-    </div>
+      </div>
+    </>
   )
 }
