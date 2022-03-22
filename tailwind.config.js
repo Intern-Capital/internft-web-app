@@ -14,13 +14,13 @@ module.exports = {
         sans: ["Inter var", ...defaultTheme.fontFamily.sans],
       },
       animation: {
-        flicker: "flicker 500ms ease-in-out infinite",
+        flicker: "flicker 5000ms ease-in-out infinite",
         wiggle: "wiggle 1s ease-in-out infinite",
       },
       keyframes: {
         flicker: {
-          "0%, 100%": { opacity: 1 },
-          "50%": { opacity: 0 },
+          "0%, 100%": { opacity: 0 },
+          "50%": { opacity: 1 },
         },
         wiggle: {
           "0%, 100%": { transform: "rotate(-3deg)" },
