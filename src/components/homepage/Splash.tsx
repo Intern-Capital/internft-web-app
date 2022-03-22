@@ -70,6 +70,13 @@ const internBgs = [
   intern29,
 ]
 
+const RadialBackground = styled.div`
+  background: rgb(0, 0, 0);
+  background: radial-gradient(circle, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+  // background: rgb(199, 23, 23);
+  // background: radial-gradient(circle, rgba(199, 23, 23, 0) 0%, rgba(212, 37, 37, 1) 100%);
+`
+
 export function Splash() {
   const navigate = useNavigate()
 
@@ -89,10 +96,15 @@ export function Splash() {
 
   return (
     <div className='bg-black'>
-      <div className='animate-flicker'>
+      <RadialBackground className='absolute top-0 left-0 w-full h-full bg-cover bg-center z-2 '>
+        <div className='max-w-max mx-auto h-screen flex place-items-center justify-center'>
+          <main className='flex text-3xl text-white p-10 rounded-md'></main>
+        </div>
+      </RadialBackground>
+      <div className='animate-flicker z-0'>
         <div className='h-screen w-full'></div>
         <div
-          className='absolute top-0 left-0 w-full h-full bg-contain bg-no-repeat bg-center'
+          className='absolute top-0 left-0 w-full h-full bg-cover bg-no-repeat bg-center'
           style={{ backgroundImage: `url(${imageUrl})` }}
         >
           <div className='max-w-max mx-auto h-screen flex place-items-center justify-center'>
@@ -119,7 +131,7 @@ export function Splash() {
           </div>
         </div>
       </div>
-      <div className='absolute top-0 left-0 w-full h-full bg-cover bg-center'>
+      <div className='absolute top-0 left-0 w-full h-full bg-cover bg-center z-1'>
         <div className='max-w-max mx-auto h-screen flex place-items-center justify-center'>
           <main className='flex bg-black p-10 rounded-md opacity-80'>
             <p className='text-4xl font-extrabold text-indigo-600 sm:text-5xl'>404</p>
