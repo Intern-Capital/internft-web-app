@@ -14,7 +14,7 @@ module.exports = {
         sans: ["Inter var", ...defaultTheme.fontFamily.sans],
       },
       animation: {
-        flicker: "flicker 5000ms ease-in-out infinite",
+        flicker: "flicker 500ms ease-in-out infinite",
         wiggle: "wiggle 1s ease-in-out infinite",
       },
       keyframes: {

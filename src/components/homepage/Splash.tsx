@@ -92,7 +92,7 @@ export function Splash() {
       <div className='animate-flicker'>
         <div className='h-screen w-full'></div>
         <div
-          className='absolute top-0 left-0 w-full h-full bg-cover bg-center'
+          className='absolute top-0 left-0 w-full h-full bg-contain bg-no-repeat bg-center'
           style={{ backgroundImage: `url(${imageUrl})` }}
         >
           <div className='max-w-max mx-auto h-screen flex place-items-center justify-center'>
