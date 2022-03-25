@@ -12,7 +12,11 @@ export function ArtWallRow({ startNumber, direction }: Props) {
 
   return (
     <Controller>
-      <Scene triggerElement={"#trigger-" + startNumber} duration={3000}>
+      <Scene
+        key={"scene-" + startNumber}
+        triggerElement={"#trigger-" + startNumber}
+        duration={3000}
+      >
         {(progress) => (
           <Tween to={directionSetting} ease='Strong.easeOut' totalProgress={progress} paused>
             <div

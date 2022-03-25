@@ -1,6 +1,7 @@
 import { AnnotationIcon, LightningBoltIcon } from "@heroicons/react/outline"
 import ReactPlayer from "react-player/lazy"
 import { Background } from "./Background"
+import InternBullet from "../Bullet"
 
 const features = [
   {
@@ -19,17 +20,17 @@ const features = [
 
 export function About() {
   return (
-    <div className='about relative py-48 dark text-white'>
+    <div className='about overflow-hidden relative py-48 dark text-white'>
       <Background showBackgroundImage={true} />
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10'>
         <div className='lg:text-center mb-16 relative'>
-          <h2 className='text-base text-purple-200 font-semibold tracking-wide uppercase mb-4'>
+          <h2 className='text-base text-purple-500 font-semibold tracking-wide uppercase mb-4'>
             About
           </h2>
           <p className='mt-2  text-3xl leading-8 font-extrabold tracking-tight  sm:text-4xl'>
             Blood, Sweat, Tears... and Ramen
           </p>
-          <p className='mt-4 max-w-2xl text-xl text-purple-200 lg:mx-auto'>
+          <p className='mt-4 max-w-2xl text-xl text-white lg:mx-auto'>
             The beating heart of the Web3 ecosystem is fueled by the ambition and promise of our
             intoooorns.
           </p>
@@ -44,15 +45,18 @@ export function About() {
               playing={true}
               url='https://player.vimeo.com/video/692045625?h=08950619e2'
             />
+            <div className='text-sm text-white text-center p-2 italic'>
+              actual footage of real life intern at work
+            </div>
           </div>
           <div className='flex-1 pl-12'>
             {features.map((feature) => (
               <div key={feature.name} className='relative mb-10'>
                 <dt>
-                  <div className='absolute flex items-center justify-center h-12 w-12 rounded-md bg-purple-900 text-white'>
+                  <div className='absolute justify-center h-12 w-12 inline-flex items-center p-1 uppercase border border-indigo-900 font-medium rounded-full shadow-sm hover:from-purple-800 hover:to-indigo-900 bg-gradient-to-b from-purple-700 to-indigo-800 '>
                     <feature.icon className='h-6 w-6' aria-hidden='true' />
                   </div>
-                  <p className='ml-16 text-lg leading-6 font-medium text-purple-200'>
+                  <p className='ml-16 text-lg leading-6 font-medium text-purple-500'>
                     {feature.name}
                   </p>
                 </dt>
