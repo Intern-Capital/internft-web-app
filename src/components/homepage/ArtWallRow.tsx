@@ -1,7 +1,6 @@
 import SampleInterns from "../utilities/SampleInterns"
 import { Controller, Scene } from "react-scrollmagic"
 import { Tween } from "react-gsap"
-import styled from "styled-components"
 
 interface Props {
   startNumber: number

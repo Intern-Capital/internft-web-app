@@ -1,8 +1,5 @@
-import { Link, useNavigate } from "react-router-dom"
-import deskBackgroundImage from "../../assets/desk-background.jpg"
+import { useNavigate } from "react-router-dom"
 import styled from "styled-components"
-import internLogo from "../../assets/intern-capital-logo.svg"
-import videoBackground from "../../assets/space.mp4"
 import { useEffect, useState } from "react"
 import SampleInterns from "../utilities/SampleInterns"
 
@@ -15,7 +12,6 @@ const RadialBackground = styled.div`
 
 export function Splash() {
   const navigate = useNavigate()
-
   const navigateToExternalLink = (link: string) => {
     window.open(link, "_blank")
   }

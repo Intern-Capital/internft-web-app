@@ -1,6 +1,3 @@
-/* This example requires Tailwind CSS v2.0+ */
-import { InboxIcon, SparklesIcon } from "@heroicons/react/outline"
-
 export function Newsletter() {
   return (
     <div className='bg-white py-16 sm:py-24'>

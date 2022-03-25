@@ -1,11 +1,9 @@
 import { MenuIcon, XIcon } from "@heroicons/react/outline"
-import { Navigate, Route, Routes } from "react-router-dom"
 import { Popover, Transition } from "@headlessui/react"
 
 import { Fragment } from "react"
 import { Wallet } from "../utilities/Wallet"
 import logo from "../../assets/intern-capital-logo.svg"
-import { useNavigate } from "react-router-dom"
 import AnimatedLogo from "../AnimatedLogo"
 
 const navigation = [

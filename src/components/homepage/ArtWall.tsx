@@ -1,15 +1,4 @@
-import SampleInterns from "../utilities/SampleInterns"
-import { Controller, Scene } from "react-scrollmagic"
-import { Tween, Timeline } from "react-gsap"
-import styled from "styled-components"
 import { ArtWallRow } from "./ArtWallRow"
-
-const TweenStyled = styled.div`
-  .tween {
-    margin: 0 !important;
-    position: relative;
-  }
-`
 
 export function ArtWall() {
   return (
