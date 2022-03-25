@@ -13,7 +13,7 @@ export function Hero() {
       <div className='relative pb-16 sm:pb-24'>
         <Nav />
         <div
-          className='animate-flickerMinor absolute top-0 left-0 w-full h-full bg-cover bg-no-repeat bg-center -z-10'
+          className='absolute top-0 left-0 w-full h-full bg-cover bg-no-repeat bg-center -z-10'
           style={{ backgroundImage: `url(${deskBackgroundBlack})` }}
         >
           <div className='max-w-max mx-auto h-min-400 flex place-items-center justify-center'></div>

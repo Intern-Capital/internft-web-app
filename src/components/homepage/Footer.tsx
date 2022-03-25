@@ -91,7 +91,7 @@ const navigation = {
 }
 export function Footer() {
   return (
-    <footer className='bg-gray-800 z-10' aria-labelledby='footer-heading'>
+    <footer className='bg-darkpurple z-10' aria-labelledby='footer-heading'>
       <h2 id='footer-heading' className='sr-only'>
         Footer
       </h2>
@@ -106,7 +106,7 @@ export function Footer() {
             ))}
           </div>
           <p className='mt-8 text-base text-gray-400 md:mt-0 md:order-1'>
-            &copy; 2020 Workflow, Inc. All rights reserved.
+            &copy; 2022 Intern Capital. All rights reserved.
           </p>
         </div>
       </div>
