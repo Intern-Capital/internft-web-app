@@ -61,7 +61,7 @@ export function Newsletter() {
             <div className='relative'>
               <div className='sm:text-center'>
                 <h2 className='text-3xl font-extrabold text-white tracking-tight sm:text-4xl'>
-                  Get notified when we&rsquo;re launching.
+                  Get Whitelisted. Quick. Easy.
                 </h2>
                 <p className='mt-6 mx-auto max-w-2xl text-lg text-indigo-200'>
                   Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed

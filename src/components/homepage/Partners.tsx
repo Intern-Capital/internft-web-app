@@ -2,7 +2,7 @@ import onePlanet from "../../assets/logos/one-planet.svg"
 
 export function Partners() {
   return (
-    <div className='partners bg-darkviolet shadow-2xl overflow-visible'>
+    <div className='partners shadow-2xl overflow-visible bg-gradient-to-r from-darkviolet to-darkpurple'>
       <div className='max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8'>
         <div className='lg:grid lg:grid-cols-2 lg:gap-8'>
           <h2 className='max-w-md mx-auto text-3xl font-extrabold text-white text-center lg:max-w-xl lg:text-left'>

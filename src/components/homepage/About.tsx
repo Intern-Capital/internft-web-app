@@ -20,7 +20,7 @@ const features = [
 export function About() {
   return (
     <div className='about relative py-48 dark text-white'>
-      <Background />
+      <Background showBackgroundImage={true} />
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10'>
         <div className='lg:text-center mb-16 relative'>
           <h2 className='text-base text-purple-200 font-semibold tracking-wide uppercase mb-4'>

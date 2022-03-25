@@ -62,7 +62,7 @@ const communicationFeatures = [
 export function Roadmap() {
   return (
     <div className='roadmap overflow-hidden relative py-48 dark text-white'>
-      <Background />
+      <Background showBackgroundImage={true} />
       <div className='lg:grid lg:grid-flow-row-dense lg:grid-cols-2 lg:gap-8 lg:items-center'>
         <div className='lg:col-start-2 relative'>
           <dl className='mt-10 space-y-10'>
