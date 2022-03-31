@@ -1,6 +1,3 @@
-/* This example requires Tailwind CSS v2.0+ */
-import { InboxIcon, SparklesIcon } from "@heroicons/react/outline"
-
 import intern1 from "../../assets/samples/intern-10.jpg"
 import intern2 from "../../assets/samples/intern-16.jpg"
 import intern3 from "../../assets/samples/intern-22.jpg"
@@ -61,14 +58,11 @@ export function Team() {
           <div className='space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none'>
             <h2 className='text-3xl font-extrabold tracking-tight sm:text-4xl'>Our Team</h2>
             <p className='text-xl text-gray-500'>
-              Odio nisi, lectus dis nulla. Ultrices maecenas vitae rutrum dolor ultricies donec
-              risus sodales. Tempus quis et.
+              Just a collection of intoooorns who are building the future of tech one bowl of
+              noodles at a time.
             </p>
           </div>
-          <ul
-            role='list'
-            className='space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8'
-          >
+          <ul className='space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8'>
             {people.map((person) => (
               <li key={person.name}>
                 <div className='space-y-4'>

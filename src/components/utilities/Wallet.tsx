@@ -16,7 +16,13 @@ export function Wallet() {
     setOpen(false)
   }
 
-  const getButtonText = () => {
+  const onMouseEnter = () => {
+    document.getElementById("hover-target").style.display = "block"
+  }
+  const onMouseLeave = () => {
+    document.getElementById("hover-target").style.display = "none"
+  }
+  const buttonText = () => {
     return connectedWallet
       ? `${connectedWallet.walletAddress.substring(
           0,
@@ -30,7 +36,13 @@ export function Wallet() {
 
   return (
     <>
-      <InternButton onClick={handleClickOpen}>{getButtonText()}</InternButton>
+      <InternButton
+        onMouseEnter={onMouseEnter}
+        onMouseLeave={onMouseLeave}
+        onClick={handleClickOpen}
+      >
+        {buttonText()}
+      </InternButton>
       <Transition.Root show={open} as={Fragment}>
         <Dialog as='div' className='fixed z-10 inset-0 overflow-y-auto' onClose={setOpen}>
           <div className='flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0'>
