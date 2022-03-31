@@ -32,14 +32,11 @@ export function Hero() {
     <div className='hero w-full h-screen'>
       <div className='relative h-screen flex flex-col'>
         <div className='backgrounds'>
-          <div
-            className='absolute top-0 left-0 w-full h-full bg-cover bg-no-repeat bg-center -z-10'
-            style={{ backgroundImage: `url(${deskBackgroundBlack})` }}
-          >
+          <div className='animate-flickerMinor bg-black absolute top-0 left-0 w-full h-full bg-cover bg-no-repeat bg-center -z-10'>
             <div className='max-w-max mx-auto h-min-400 flex place-items-center justify-center'></div>
           </div>
           <div
-            className='animate-flickerMinor absolute top-0 left-0 w-full h-full bg-cover bg-no-repeat bg-center -z-10'
+            className=' absolute top-0 left-0 w-full h-full bg-cover bg-no-repeat bg-center -z-30'
             style={{ backgroundImage: `url(${deskBackground})` }}
           >
             <div className='max-w-max mx-auto h-min-400 flex place-items-center justify-center'></div>
@@ -62,7 +59,7 @@ export function Hero() {
                     key={"layer-" + index}
                     className={
                       (counter > index ? ` opacity-100` : `  `) +
-                      ` animate-flickerMinor absolute top-0 w-full h-full bg-cover bg-no-repeat bg-center -z-10`
+                      `  absolute top-0 w-full h-full bg-cover bg-no-repeat bg-center -z-20`
                     }
                     style={{ backgroundImage: `url(${HeroLayers[index]})` }}
                   >
