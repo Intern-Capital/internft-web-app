@@ -4,28 +4,52 @@ import deskBackground from "../../assets/desk-background.jpg"
 import deskBackgroundBlack from "../../assets/desk-background-black.jpg"
 import ScrollDown from "../ScrollDown"
 import InternButton from "../Button"
+import HeroLayers from "../utilities/HeroLayers"
+import { useState } from "react"
 
 const DISCORD_LINK = "https://discord.gg/Jbbf9D6h5E"
 
 export function Hero() {
+  const [layersToShow, setLayersToShow] = useState(0)
+
+  setInterval(() => {
+    const numLayers = Math.floor(Math.random() * 10)
+    setLayersToShow(numLayers)
+  }, 5000)
+
   return (
-    <div className='hero w-full'>
-      <div className='relative pb-16 sm:pb-24'>
+    <div className='hero w-full h-screen'>
+      <div className='relative h-screen flex flex-col'>
+        <div className='backgrounds'>
+          <div
+            className='absolute top-0 left-0 w-full h-full bg-cover bg-no-repeat bg-center -z-10'
+            style={{ backgroundImage: `url(${deskBackgroundBlack})` }}
+          >
+            <div className='max-w-max mx-auto h-min-400 flex place-items-center justify-center'></div>
+          </div>
+          <div
+            className='animate-flickerMinor absolute top-0 left-0 w-full h-full bg-cover bg-no-repeat bg-center -z-10'
+            style={{ backgroundImage: `url(${deskBackground})` }}
+          >
+            <div className='max-w-max mx-auto h-min-400 flex place-items-center justify-center'></div>
+          </div>
+          {HeroLayers.map((layer, index) => {
+            return layersToShow > index ? (
+              <div
+                key={"layer-" + index}
+                className={`animate-flickerLayer${
+                  index + 1
+                } absolute top-0 left-0 w-full h-full bg-cover bg-no-repeat bg-center -z-10`}
+                style={{ backgroundImage: `url(${HeroLayers[index]})` }}
+              >
+                <div className='max-w-max mx-auto h-min-400 flex place-items-center justify-center'></div>
+              </div>
+            ) : null
+          })}
+        </div>
         <Nav />
-        <div
-          className='absolute top-0 left-0 w-full h-full bg-cover bg-no-repeat bg-center -z-10'
-          style={{ backgroundImage: `url(${deskBackgroundBlack})` }}
-        >
-          <div className='max-w-max mx-auto h-min-400 flex place-items-center justify-center'></div>
-        </div>
-        <div
-          className='animate-flickerMinor absolute top-0 left-0 w-full h-full bg-cover bg-no-repeat bg-center -z-10'
-          style={{ backgroundImage: `url(${deskBackground})` }}
-        >
-          <div className='max-w-max mx-auto h-min-400 flex place-items-center justify-center'></div>
-        </div>
-        <main className='mt-32 mb-48 sm:mt-48 z-1'>
-          <div className='mx-auto max-w-7xl'>
+        <main className='flex flex-col grow justify-center z-1'>
+          <div className='mx-auto max-w-7xl pb-20'>
             <div className='lg:grid lg:grid-cols-12 lg:gap-8'>
               <div className='px-4 sm:px-6 sm:text-center md:max-w-2xl md:mx-auto lg:col-span-4 lg:text-left lg:flex lg:items-center'>
                 <div>
