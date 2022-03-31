@@ -5,7 +5,7 @@ import layer3 from "../../assets/hero/layer-3.png"
 import layer4 from "../../assets/hero/layer-4.png"
 import layer5 from "../../assets/hero/layer-5.png"
 import layer6 from "../../assets/hero/layer-6.png"
-import layer7 from "../../assets/hero/layer-7.png"
+import layer7 from "../../assets/hero/layer-7.gif"
 import layer8 from "../../assets/hero/layer-8.png"
 import layer9 from "../../assets/hero/layer-9.png"
 // #endregion

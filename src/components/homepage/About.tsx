@@ -20,11 +20,14 @@ const features = [
 
 export function About() {
   return (
-    <div className='about overflow-hidden relative py-48 dark text-white'>
+    <div id='about' className='about overflow-hidden relative py-48 dark text-white'>
       <Background showBackgroundImage={true} />
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10'>
         <div className='lg:text-center mb-16 relative'>
-          <h2 className='text-base text-purple-500 font-semibold tracking-wide uppercase mb-4'>
+          <h2
+            id='about-heading'
+            className='text-base text-purple-500 font-semibold tracking-wide uppercase mb-4'
+          >
             About
           </h2>
           <p className='mt-2  text-3xl leading-8 font-extrabold tracking-tight  sm:text-4xl'>

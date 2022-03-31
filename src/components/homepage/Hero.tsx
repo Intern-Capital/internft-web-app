@@ -5,17 +5,28 @@ import deskBackgroundBlack from "../../assets/desk-background-black.jpg"
 import ScrollDown from "../ScrollDown"
 import InternButton from "../Button"
 import HeroLayers from "../utilities/HeroLayers"
-import { useState } from "react"
+import { useState, useEffect } from "react"
+import { Controller, Scene } from "react-scrollmagic"
+import { Tween } from "react-gsap"
 
 const DISCORD_LINK = "https://discord.gg/Jbbf9D6h5E"
 
 export function Hero() {
-  const [layersToShow, setLayersToShow] = useState(0)
+  const [counter, setCounter] = useState(0)
 
-  setInterval(() => {
-    const numLayers = Math.floor(Math.random() * 10)
-    setLayersToShow(numLayers)
-  }, 5000)
+  // useEffect(() => {
+  //   setInterval(() => {
+  //     setCounter(counter + 1)
+  //     console.log(counter)
+  //   }, 3000)
+  // }, [counter])
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCounter(counter + 1)
+    }, 9000)
+    return () => clearInterval(interval)
+  }, [counter])
 
   return (
     <div className='hero w-full h-screen'>
@@ -33,19 +44,34 @@ export function Hero() {
           >
             <div className='max-w-max mx-auto h-min-400 flex place-items-center justify-center'></div>
           </div>
-          {HeroLayers.map((layer, index) => {
-            return layersToShow > index ? (
-              <div
-                key={"layer-" + index}
-                className={`animate-flickerLayer${
-                  index + 1
-                } absolute top-0 left-0 w-full h-full bg-cover bg-no-repeat bg-center -z-10`}
-                style={{ backgroundImage: `url(${HeroLayers[index]})` }}
-              >
-                <div className='max-w-max mx-auto h-min-400 flex place-items-center justify-center'></div>
-              </div>
-            ) : null
-          })}
+          <Scene key={"heroscene"} duration={300} offset={300} pin>
+            <Tween
+              staggerFrom={{
+                opacity: 0,
+                cycle: {
+                  rotationX: [-90, 90],
+                  transformOrigin: ["50% top -100", "50% bottom 100"],
+                },
+              }}
+              stagger={0.1}
+              ease='Strong.easeOut'
+            >
+              {HeroLayers.map((layer, index) => {
+                return (
+                  <div
+                    key={"layer-" + index}
+                    className={
+                      (counter > index ? ` opacity-100` : `  `) +
+                      ` animate-flickerMinor absolute top-0 w-full h-full bg-cover bg-no-repeat bg-center -z-10`
+                    }
+                    style={{ backgroundImage: `url(${HeroLayers[index]})` }}
+                  >
+                    <div className='max-w-max mx-auto h-min-400 flex place-items-center justify-center'></div>
+                  </div>
+                )
+              })}
+            </Tween>
+          </Scene>
         </div>
         <Nav />
         <main className='flex flex-col grow justify-center z-1'>
@@ -59,10 +85,10 @@ export function Hero() {
                     rel='noopener noreferrer'
                     className='inline-flex items-center text-white bg-gray-900 hover:bg-gray-800 rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200'
                   >
-                    <span className='px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-purple-800 rounded-full'>
+                    <span className='px-3 py-0.5 text-white whitespace-nowrap text-xs font-semibold leading-5 uppercase tracking-wide bg-purple-800 rounded-full'>
                       Calling all interns
                     </span>
-                    <span className='ml-4 text-sm'>Join us on Discord</span>
+                    <span className='ml-4 text-sm  whitespace-nowrap'>Join us on Discord</span>
                     <ChevronRightIcon className='ml-2 w-5 h-5 text-gray-500' aria-hidden='true' />
                   </a>
                   <h1 className='mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:leading-none lg:mt-6 lg:text-5xl xl:text-6xl'>
@@ -84,7 +110,7 @@ export function Hero() {
             </div>
           </div>
         </main>
-        <div className='absolute left-0 right-0 bottom-0 pb-10'>
+        <div id='scrolldown' className='absolute left-0 right-0 bottom-0 pb-10'>
           <ScrollDown />
         </div>
       </div>
