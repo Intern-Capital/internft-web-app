@@ -53,7 +53,7 @@ export function About() {
                 url='https://player.vimeo.com/video/692045625?h=08950619e2'
               />
               <div className='text-sm text-white text-center p-2 italic'>
-                Actual footage of an intern at work
+                Actual footage of an intern hand-drawing InterNFT artwork
               </div>
             </div>
           </Fade>
