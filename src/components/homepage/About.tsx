@@ -44,9 +44,9 @@ export function About() {
             </p>
           </div>
         </Fade>
-        <div className="flex flex-row">
+        <div className="flex flex-col md:flex-row">
           <Fade left>
-            <div className="w-[52%] relative">
+            <div className="w-[100%] md:w-[52%] relative">
               <ReactPlayer
                 muted={true}
                 loop={true}
@@ -55,13 +55,13 @@ export function About() {
                 playing={true}
                 url="https://player.vimeo.com/video/692045625?h=08950619e2"
               />
-              <div className="text-sm text-white text-center p-2 italic">
+              <div className="text-sm text-white text-center p-2 italic mb-6">
                 Actual footage of an intern hand-drawing InterNFT artwork
               </div>
             </div>
           </Fade>
           <Fade right>
-            <div className="flex-1 pl-12">
+            <div className="flex-1 md:pl-12">
               {features.map((feature) => (
                 <div key={feature.name} className="relative mb-10">
                   <dt>
