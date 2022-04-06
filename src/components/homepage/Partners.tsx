@@ -52,8 +52,8 @@ export function Partners() {
               <img className="max-h-12" src={terraspacesLogo} alt="StaticKit" />
             </a>
           </div>
-          <div className="md:pl-12">
-            <h2 className="md:max-w-md text-3xl font-extrabold text-white md:text-center lg:max-w-xl lg:text-left">
+          <div className="pl-0 lg:pl-12">
+            <h2 className="lg:max-w-md text-3xl font-extrabold text-white text-left  lg:max-w-xl lg:text-left">
               Interns support a wide range of projects across borders,
               protocols, and countries.
             </h2>
