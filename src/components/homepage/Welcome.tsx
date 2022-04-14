@@ -6,7 +6,7 @@ import dokwon from "../../assets/do-kwon.jpg"
 
 export function Welcome() {
   return (
-    <div className='relative bg-white pt-16 pb-32 overflow-hidden'>
+    <div className='relative bg-white pt-16 pb-16 overflow-hidden'>
       <div className='relative'>
         <div className='lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:grid-flow-col-dense lg:gap-24'>
           <div className='px-4 max-w-xl mx-auto sm:px-6 lg:py-16 lg:max-w-none lg:mx-0 lg:px-0'>
@@ -15,22 +15,19 @@ export function Welcome() {
               <Fade left>
                 {" "}
                 <div className='mt-6'>
-                  <h2
-                    className='text-base text-purple-500  font-semibold tracking-wide uppercase mb-2'
-                  >
+                  <h2 className='text-base text-purple-500  font-semibold tracking-wide uppercase mb-2'>
                     BEEF UP YOUR INTERNSHIP
                   </h2>
                   <h2 className='text-3xl font-extrabold tracking-tight text-gray-900'>
                     Interns Produce Results
                   </h2>
-                  <p className='mt-4 text-lg text-gray-500'>
-                    We at Intern Capital take our jobs seriously (sometimes). We don't have time to
-                    sit and look pretty while building. A hard days work starts and ends with ramen,
-                    and that is what keeps us motivated. One day, we aspire to wake up and have beef
-                    flavored ramen staring back at us, rather than chicken flavored. (nothing
-                    against chicken flavored).{" "}
+                  <p className='mt-4 text-sm text-gray-500'>
+                    We at Intern Capital take our jobs seriously (sometimes). A hard days work
+                    starts and ends with ramen, and that is what keeps us motivated. One day, we
+                    aspire to wake up and have beef flavored ramen staring back at us, rather than
+                    chicken flavored. (nothing against chicken flavored).{" "}
                   </p>
-                  <p className='mt-4 text-lg text-gray-500'>
+                  <p className='mt-4 text-sm text-gray-500'>
                     The InternNFT project is just getting started and we plan to continue building
                     in order to increase usage, gamification, and utility for these Interns. If we
                     stop working now, we won't get our fair share of ramen and we wouldn't want that
@@ -38,14 +35,14 @@ export function Welcome() {
                   </p>
                   <div className='mt-6'>
                     <InternButton
-                      onClick={() =>
+                      onClick={() => {
                         window.open(
-                          "https://docs.google.com/forms/d/e/1FAIpQLSdiGZ5hxliDhVuzOoP38YWrVECMotDqQB2l7zomVDNwhoL7Bg/viewform",
+                          "https://www.oneplanetnft.io/launchpad/randombox/62543b7e4aaded78ff674d6e",
                           "_blank"
                         )
-                      }
+                      }}
                     >
-                      Join Whitelist
+                      BUY NOW
                     </InternButton>
                   </div>
                 </div>
@@ -58,7 +55,7 @@ export function Welcome() {
                 target={"_blank"}
                 rel='noreferrer'
               >
-                <div className='mb-4'>
+                <div className='mb-4 text-sm'>
                   <p className='mb-4'>Totally unrelated, but eating instant ramen for breakfast</p>
                   <p className='mb-8'>What a coincidence</p>
                 </div>
@@ -79,13 +76,13 @@ export function Welcome() {
               </a>
             </div>
           </div>
-          <div className='mt-12 sm:mt-16 lg:mt-0'>
-            <div className='pl-4 -mr-64 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full'>
+          <div className='mt-12 sm:mt-16 lg:mt-0 pr-10'>
+            <div className='pl-4 -mr-48 sm:pl-6 md:-mr-16 lg:px-0 lg:m-0 lg:relative lg:h-full pr-12'>
               <Fade right>
                 <img
-                  className='w-full rounded-xl shadow-2xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none'
+                  className='w-full rounded-xl shadow-2xl ring-1 ring-black ring-opacity-5 lg:absolute lg:left-0 lg:h-full lg:w-auto lg:max-w-none mr-5'
                   src={internSample}
-                  alt='Inbox user interface'
+                  alt='InterNFT Sample'
                 />
               </Fade>
             </div>

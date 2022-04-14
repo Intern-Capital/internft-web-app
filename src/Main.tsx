@@ -6,8 +6,8 @@ import { Splash } from "./components/pages/Splash"
 export function Main() {
   return (
     <Routes>
-      <Route path='/' element={<Splash />} />
-      <Route path='/home' element={<Home />} />
+      <Route path='/' element={<Home />} />
+      <Route path='/splash' element={<Splash />} />
       <Route path='*' element={<Navigate replace to='/' />} />
     </Routes>
   )

@@ -62,17 +62,21 @@ export function Newsletter() {
             <div className='relative text-center'>
               <div className='sm:text-center'>
                 <h2 className='text-3xl font-extrabold text-white tracking-tight sm:text-4xl'>
-                  Get Whitelisted. Quick. Easy.
+                  It's Time to Get Involved.
                 </h2>
-                <p className='mt-6 mb-6 mx-auto max-w-2xl text-lg text-indigo-200'>Go. Go Now.</p>
+                <p className='mt-6 mb-6 mx-auto max-w-2xl text-lg text-indigo-200'>
+                  Earn your ramen.
+                </p>
               </div>
               <InternButton
                 onClick={() => {
-                  window.open(WHITELIST_URL, "_blank")
+                  window.open(
+                    "https://www.oneplanetnft.io/launchpad/randombox/62543b7e4aaded78ff674d6e",
+                    "_blank"
+                  )
                 }}
-                className='m-auto'
               >
-                JOIN WHITELIST
+                BUY NOW
               </InternButton>
             </div>
           </div>
