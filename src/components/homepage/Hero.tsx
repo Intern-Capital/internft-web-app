@@ -79,12 +79,12 @@ export function Hero() {
           </Scene>
         </div>
         <Nav />
-        <main className='flex flex-col grow justify-center z-1'>
+        <main className='flex flex-col grow justify-center -z-1'>
           <div className='mx-auto max-w-7xl pb-20'>
             <div className='lg:grid lg:grid-cols-12 lg:gap-8'>
-              <div className='px-4 sm:px-6 sm:text-center md:max-w-2xl md:mx-auto lg:col-span-4 lg:text-left lg:flex lg:items-center'>
+              <div className='px-4 sm:px-6 sm:text-center md:max-w-2xl md:mx-auto lg:col-span-4 lg:text-left lg:flex lg:items-center bg-black/80'>
                 <Fade left>
-                  <div>
+                  <div className='py-5'>
                     <a
                       href={DISCORD_LINK}
                       target='_blank'
@@ -101,7 +101,7 @@ export function Hero() {
                     </a>
                     <h1 className='mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:leading-none lg:mt-6 lg:text-5xl xl:text-6xl'>
                       <span className='text-purple-800 md:block text-5xl'>Welcome to</span>
-                      <span className='md:block mb-2'>InterNFT</span>{" "}
+                      <span className='md:block mb-2 sm:block text-5xl'>&nbsp;InterNFT</span>{" "}
                     </h1>
                     <p className='mt-3 text-sm text-gray-300 sm:mt-5 mb-5 sm:text-xl lg:text-lg xl:text-xl'>
                       Intern Capital's innovative and transformative NFT collection, created by
