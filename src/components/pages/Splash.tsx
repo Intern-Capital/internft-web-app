@@ -31,9 +31,7 @@ export function Splash() {
 
   return (
     <div className='bg-black'>
-      <div className='w-full z-10  relative'>
-        <img src={logo} className=' top-10 w-80 max-w-md m-auto' alt='Intern Capital' />
-      </div>
+      <img src={logo} className='z-10 absolute top-10 left-2 max-w-md' alt='Intern Capital' />
       <RadialBackground className='absolute top-0 left-0 w-full h-full bg-cover bg-center z-2 '>
         <div className='max-w-max mx-auto h-screen flex place-items-center justify-center'>
           <main className='flex text-3xl text-white p-10 rounded-md'></main>
@@ -47,7 +45,7 @@ export function Splash() {
         >
           <div className='max-w-max mx-auto h-screen flex place-items-center justify-center'>
             <main className='flex bg-black p-10 rounded-md opacity-80'>
-              <p className='text-4xl font-extrabold text-indigo-600 sm:text-5xl'></p>
+              <p className='text-4xl font-extrabold text-indigo-600 sm:text-5xl'>404</p>
               <div className='sm:ml-6'></div>
             </main>
           </div>
@@ -55,13 +53,9 @@ export function Splash() {
       </div>
       <div className='absolute top-0 left-0 w-full h-full bg-cover bg-center z-1'>
         <div className='max-w-max mx-auto h-screen flex place-items-center justify-center'>
-          <main className='bg-black p-10 rounded-md opacity-80 lg:flex'>
-            <div className='flex'>
-              <p className='text-4xl font-extrabold text-indigo-600 sm:text-5xl mb-5 lg:mr-5'>
-                4.14.22
-              </p>
-            </div>
-            <div className=''>
+          <main className='flex bg-black p-10 rounded-md opacity-80'>
+            <p className='text-4xl font-extrabold text-indigo-600 sm:text-5xl'>4.14.22</p>
+            <div className='sm:ml-6'>
               <div className='sm:border-l sm:border-gray-200 sm:pl-6 '>
                 <h1 className='text-4xl font-extrabold text-gray-200 mb-5 tracking-tight sm:text-5xl'>
                   Intern Not Found

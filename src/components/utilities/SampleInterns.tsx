@@ -1,3 +1,4 @@
+// #region interns
 import intern0 from "../../assets/samples/intern-0.jpg"
 import intern1 from "../../assets/samples/intern-1.jpg"
 import intern2 from "../../assets/samples/intern-2.jpg"
@@ -28,6 +29,7 @@ import intern26 from "../../assets/samples/intern-26.jpg"
 import intern27 from "../../assets/samples/intern-27.jpg"
 import intern28 from "../../assets/samples/intern-28.jpg"
 import intern29 from "../../assets/samples/intern-29.jpg"
+// #endregion
 
 const SampleInterns = [
   intern0,

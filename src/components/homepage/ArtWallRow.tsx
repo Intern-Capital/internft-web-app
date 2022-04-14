@@ -26,7 +26,10 @@ export function ArtWallRow({ startNumber, direction }: Props) {
             >
               {Array.apply(null, Array(8)).map((_, i) => {
                 return (
-                  <div className='relative m-0 inline-block w-[20] border-y-8 border-r-8 first:border-l-8 border-purple-900 shadow-inner'>
+                  <div
+                    key={"row-" + startNumber + "-" + i}
+                    className='relative m-0 inline-block w-[20] border-y-8 border-r-8 first:border-l-8 border-purple-900 shadow-inner'
+                  >
                     <img
                       className='w-96 shadow-lg'
                       src={SampleInterns[startNumber + i]}
