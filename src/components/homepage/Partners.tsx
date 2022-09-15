@@ -1,9 +1,9 @@
-import onePlanetImage from '../../assets/logos/one-planet.svg'
+import InternButton from '../Button'
 import angelImage from '../../assets/logos/angel.png'
+import apolloLogo from '../../assets/logos/apollodao.svg'
+import onePlanetImage from '../../assets/logos/one-planet.svg'
 import terraspacesLogo from '../../assets/logos/terraspaces.png'
 import tixLogo from '../../assets/logos/tix.svg'
-import apolloLogo from '../../assets/logos/apollodao.svg'
-import InternButton from '../Button'
 
 export function Partners() {
   return (
@@ -11,14 +11,6 @@ export function Partners() {
       <div className='max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8'>
         <div className='lg:grid lg:grid-cols-2 lg:gap-8 lg:items-center'>
           <div className='mt-8 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-0 lg:grid-cols-2 sm:mb-6'>
-            <a
-              href='https://www.oneplanetnft.io/'
-              target='_blank'
-              rel='noreferrer'
-              className='col-span-1 flex justify-center py-8 px-8 border border-gray-800 hover:bg-darkviolet'
-            >
-              <img className='max-h-12' src={onePlanetImage} alt='One Planet' />
-            </a>
             <a
               href='https://www.angelprotocol.io/'
               target='_blank'
@@ -36,7 +28,7 @@ export function Partners() {
               <img className='max-h-12' src={tixLogo} alt='Tix' />
             </a>
             <a
-              href='https://app.apollo.farm/'
+              href='https://apollo.farm/'
               target='_blank'
               rel='noreferrer'
               className='col-span-1 flex justify-center py-8 px-8 border border-gray-800 hover:bg-darkviolet'

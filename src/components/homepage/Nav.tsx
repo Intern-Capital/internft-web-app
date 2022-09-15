@@ -52,12 +52,12 @@ export function Nav() {
             <InternButton
               onClick={() => {
                 window.open(
-                  "https://www.oneplanetnft.io/launchpad/randombox/62543b7e4aaded78ff674d6e",
+                  "https://illiquidlabs.io/migrate/",
                   "_blank"
                 )
               }}
             >
-              BUY NOW
+              MIGRATE NOW
             </InternButton>
           </div>
         </nav>
