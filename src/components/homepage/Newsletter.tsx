@@ -70,13 +70,10 @@ export function Newsletter() {
               </div>
               <InternButton
                 onClick={() => {
-                  window.open(
-                    "https://www.oneplanetnft.io/launchpad/randombox/62543b7e4aaded78ff674d6e",
-                    "_blank"
-                  )
+                  window.open("https://illiquidlabs.io/migrate/", "_blank")
                 }}
               >
-                BUY NOW
+                MIGRATE NOW
               </InternButton>
             </div>
           </div>
